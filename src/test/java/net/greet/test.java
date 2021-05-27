@@ -1,7 +1,6 @@
 package net.greet;
 
-import net.greet.Greeting;
-import net.greet.Greeting;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
@@ -45,13 +44,13 @@ public class test {
     }
 
 
-    //@Test
+//    @Test
 //    public void shouldBeAbleToReturnGreetedUsersAndTheirCount() {
 //        Greeting greeting = new Greeting();
 //        greeting.greet("Sivu", "isixhosa");
 //        greeting.greet("Lebo", "isizulu");
-//        greeting.greet("Lebo", "sesotho");
-//        assertEquals(2, greeting.greetedAll(Collections.singletonList("Lebo"), "Sivu"));
+//        greeting.greetedUser(Collections.singletonList("Lebo"), "Sivu");
+//        assertEquals(2, greeting.counter());
 //   }
 }
 

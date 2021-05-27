@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class Greeting {
     /*
     greet = username + language to greet in
@@ -26,7 +27,7 @@ public class Greeting {
 
         while (exit) {
             int i = 0;
-            System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. clear the guest list 'clear' \n4. count numbers of greeted people 'count' \n5. leave programme 'exit'");
+            System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. remove user 'remove [user]' \n4. clear the guest list 'clear' \n5. count numbers of greeted people 'count' \n6. leave programme 'exit'");
             String userInput = s.nextLine().toLowerCase();
             String words[] = userInput.split(" ");
 
@@ -57,10 +58,22 @@ public class Greeting {
                         break;
                 }
             }
+            else if(words[0].equals("remove") && i >= 2){
+                if (i <= 2) {
+                    removeUser();
+                    users.remove(words[1]);
+                    System.out.println("User removed.");
+                }
+//                else if (i >= 3) {
+//                    removeUser();
+//                    users.remove(words[1]);
+//                    language.remove(words[2]);
+//                }
+            }
             else if(words[0].equals("clear")) {
                 users.clear();
                 language.clear();
-                System.out.println("All information Cleared");
+                System.out.println("All information Cleared.");
             }
             else if (userInput.equals("exit")) {
                 System.out.println("Good bye.");
@@ -132,6 +145,14 @@ public class Greeting {
         }
         System.out.println("There are " + newUserList.size() + " greeted user(s).");
         newUserList.clear();
+    }
+
+    static void removeUser(){
+        HashSet<String> uniqueUsers = new HashSet<String>();
+        for (String user : uniqueUsers) {
+            boolean isremoved = uniqueUsers.remove(user);
+        }
+
     }
 
     static boolean exit() {
