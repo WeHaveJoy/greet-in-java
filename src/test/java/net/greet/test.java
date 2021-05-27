@@ -44,13 +44,21 @@ public class test {
     }
 
 
-//    @Test
-//    public void shouldBeAbleToReturnGreetedUsersAndTheirCount() {
+    @Test
+    public void shouldBeAbleToGreetUsersAndShowTheirCount() {
+        Greeting greeting = new Greeting();
+        greeting.greet("Sivu", "isixhosa");
+        greeting.greet("Lebo", "isizulu");
+        assertEquals(2, greeting.users.size());
+   }
+
+
+//        @Test
+//    public void shouldBeAbleToRemoveUserInfo() {
 //        Greeting greeting = new Greeting();
 //        greeting.greet("Sivu", "isixhosa");
-//        greeting.greet("Lebo", "isizulu");
-//        greeting.greetedUser(Collections.singletonList("Lebo"), "Sivu");
-//        assertEquals(2, greeting.counter());
+//        greeting.removeUser();
+//        assertEquals(0, greeting.users.size());
 //   }
 }
 
