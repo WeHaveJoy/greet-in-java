@@ -4,10 +4,11 @@ public class Main {
 
     public static void main(String args[]) {
     Greeting greeting = new Greeting();
+          System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. remove user 'remove [user]' \n4. clear the guest list 'clear' \n5. count numbers of greeted people 'count' \n6. leave programme 'exit'");
 
         while (greeting.exit) {
             int paramCount = 0;
-            System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. remove user 'remove [user]' \n4. clear the guest list 'clear' \n5. count numbers of greeted people 'count' \n6. leave programme 'exit'");
+          //  System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. remove user 'remove [user]' \n4. clear the guest list 'clear' \n5. count numbers of greeted people 'count' \n6. leave programme 'exit'");
             String userInput = greeting.s.nextLine().toLowerCase();
             String words[] = userInput.split(" ");
 

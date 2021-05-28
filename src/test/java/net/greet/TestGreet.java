@@ -8,8 +8,9 @@ import java.util.Collections;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class test {
-    @Test
+public class TestGreet {
+
+    @org.junit.jupiter.api.Test
     public void shouldBeAbleToGreetInIsixhosa() {
         Greeting greeting = new Greeting();
         greeting.greet("Sino", "isixhosa");
@@ -17,7 +18,7 @@ public class test {
         assertEquals(1, greeting.greetedUser(Collections.singletonList("Sino"), "Sino"));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldBeAbleToGreetInIsizulu() {
         Greeting greeting = new Greeting();
         greeting.greet("Andre", "isizulu");
@@ -25,7 +26,7 @@ public class test {
         assertEquals(0, greeting.greetedUser(Collections.singletonList("Andre"), "Unalo"));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldBeAbleToGreetInSesotho() {
         Greeting greeting = new Greeting();
         greeting.greet("Bee", "sesotho");
@@ -34,7 +35,7 @@ public class test {
         assertEquals(0, greeting.greetedUser(Collections.singletonList("Bee"), "Lulu"), "Kat");
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldBeAbleToGreetInDefaultLanguage() {
         Greeting greeting = new Greeting();
         greeting.greet("Chuma", "");
@@ -44,7 +45,7 @@ public class test {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldBeAbleToGreetUsersAndShowTheirCount() {
         Greeting greeting = new Greeting();
         greeting.greet("Sivu", "isixhosa");
@@ -53,13 +54,24 @@ public class test {
    }
 
 
-//        @Test
-//    public void shouldBeAbleToRemoveUserInfo() {
+        @org.junit.jupiter.api.Test
+    public void shouldBeAbleToRemoveUserInfo() {
+        Greeting greeting = new Greeting();
+        greeting.greet("Sivu", "isixhosa");
+        greeting.greet("Sino", "");
+        //greeting.removeUser();
+        assertEquals(1, greeting.removeUser(), greeting.users.size());
+   }
+
+
+//    @Test
+//    public void shouldBeAbleToClearAllInfo() {
 //        Greeting greeting = new Greeting();
 //        greeting.greet("Sivu", "isixhosa");
-//        greeting.removeUser();
-//        assertEquals(0, greeting.users.size());
-//   }
+//        greeting.greet("Sino", "");
+//        //greeting.removeUser();
+//        assertEquals(1, greeting.removeUser(), greeting.users.size());
+//    }
 }
 
 

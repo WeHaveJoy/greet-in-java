@@ -12,6 +12,7 @@ public class Greeting {
     greeted = all greeted users + time each has been greeted
     counter = list of unique users
     clear = deletes greetings + user info. clear + name deletes counter for the user
+    remove= deletes the a specific user and decrement the count by 1
     exit = exits app
     */
     public Boolean exit = true;
@@ -44,7 +45,7 @@ public class Greeting {
         }
     }
 
-     void addUsers(String user ){
+    public void addUsers(String user ){
         if((!users.contains(user))){
             users.add(user);
         }
