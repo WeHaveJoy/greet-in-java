@@ -21,11 +21,21 @@ public class Greeting {
     public List newUserList = new ArrayList();
 
     String userLanguage;
-     Scanner s = new Scanner(System.in);
+    Scanner s = new Scanner(System.in);
 
 
     //THE METHODS
-   public void greet(String name, String lan) {
+    public void help(){
+        System.out.println("1. greet 'greet [name] [language]' " +
+                "\n2. check who's been greeted 'greeted' or 'greeted [name]' " +
+                "\n3. remove user 'remove [user]' " +
+                "\n4. clear the guest list 'clear' " +
+                "\n5. count numbers of greeted people 'count'" +
+                " \n6. leave programme 'exit'");
+
+    }
+
+    public void greet(String name, String lan) {
         switch (lan) {
             case "isixhosa":
                 addUsers(name);
@@ -90,11 +100,11 @@ public class Greeting {
             newUserList.add(user);
         }
         System.out.println("There are " + newUserList.size() + " greeted user(s).");
-       // newUserList.clear();
+        // newUserList.clear();
         return  users.size();
     }
 
-   public int removeUser(){
+    public int removeUser(){
         HashSet<String> uniqueUsers = new HashSet<String>();
         for (String user : uniqueUsers) {
             boolean isremoved = uniqueUsers.remove(user);
@@ -103,7 +113,7 @@ public class Greeting {
         return users.size();
     }
 
-     boolean exit() {
+    boolean exit() {
         return exit = false;
     }
 }

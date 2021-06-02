@@ -1,10 +1,13 @@
 package net.greet;
 
+import javax.swing.plaf.synth.SynthTabbedPaneUI;
+
 public class Main {
 
     public static void main(String args[]) {
     Greeting greeting = new Greeting();
-          System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. remove user 'remove [user]' \n4. clear the guest list 'clear' \n5. count numbers of greeted people 'count' \n6. leave programme 'exit'");
+         // System.out.println("1. greet 'greet [name] [language]' \n2. check who's been greeted 'greeted' or 'greeted [name]' \n3. remove user 'remove [user]' \n4. clear the guest list 'clear' \n5. count numbers of greeted people 'count' \n6. leave programme 'exit'");
+        System.out.println("Please type help to see how this app works");
 
         while (greeting.exit) {
             int paramCount = 0;
@@ -45,14 +48,7 @@ public class Main {
                     greeting.users.remove(words[1]);
                     System.out.println("User removed.");
                 }
-//                else if (paramCount >= 3) {
-//                    removeUser();
-//                    users.remove(words[1]);
-//                    language.remove(words[2]);
-//                }
-//                else if(paramCount <= 1){
-//                    System.out.println("Please separate words with space e.g. remove Sino ");
-//                }
+
             }
             else if(words[0].equals("clear")) {
                 greeting.users.clear();
@@ -65,7 +61,11 @@ public class Main {
             }
             else if (words[0].equals("count")) {
                 greeting.counter(greeting.users);
-            } else {
+            }
+            else if(words[0].equals("help")){
+                greeting.help();
+            }
+            else {
                 System.out.println("Please separate words with space e.g. greet Sino isixhosa");
             }
 
