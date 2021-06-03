@@ -36,30 +36,30 @@ public class Greeting {
     }
 
     public void greet(String name, String lan) {
+        addUsers(name);
         switch (lan) {
             case "isixhosa":
-                addUsers(name);
+               // addUsers(name);
                 System.out.println("Mholo, " + name);
                 break;
             case "isizulu":
-                addUsers(name);
+               // addUsers(name);
                 System.out.println("Sawubona, " + name);
                 break;
             case "sesotho":
-                addUsers(name);
+               // addUsers(name);
                 System.out.println("Dumela, " + name);
                 break;
             default:
-                addUsers(name);
+                //addUsers(name);
                 System.out.println("Hello, " + name);
         }
     }
 
     public void addUsers(String user ){
-        if((!users.contains(user))){
-            users.add(user);
+        users.add(user);
         }
-    }
+
 
     public int greetedUser(List allUsers, String userName) {
         int i = 0;
@@ -79,6 +79,7 @@ public class Greeting {
         HashSet<String> uniqueUsers = new HashSet<>(myUsers);
         for (String user : uniqueUsers) {
             newUserList.add(user);
+          //  System.out.println(myUsers);
         }
 
         if (newUserList.size() > 0) {

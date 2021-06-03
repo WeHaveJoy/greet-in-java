@@ -23,10 +23,10 @@ public class Main {
             if (words[0].equals("greet") && paramCount >= 2) {
                 if (paramCount <= 2) {
                     greeting.greet(words[1], "");
-                    greeting.users.add(words[1]);
+                   // greeting.users.add(words[1]);
                 } else if (paramCount >= 3) {
                     greeting.greet(words[1], words[2]);
-                    greeting.users.add(words[1]);
+                  // greeting.users.add(words[1]);
                     greeting.language.add(words[2]);
                 }
 
