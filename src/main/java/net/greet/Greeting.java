@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class Greeting {
+public class Greeting implements Greetings {
     /*
     greet = username + language to greet in
     greeted = all greeted users + time each has been greeted
@@ -25,6 +25,7 @@ public class Greeting {
 
 
     //THE METHODS
+    @Override
     public void help(){
         System.out.println("1. greet 'greet [name] [language]' " +
                 "\n2. check who's been greeted 'greeted' or 'greeted [name]' " +
@@ -35,32 +36,30 @@ public class Greeting {
 
     }
 
+@Override
     public void greet(String name, String lan) {
         addUsers(name);
         switch (lan) {
             case "isixhosa":
-               // addUsers(name);
                 System.out.println("Mholo, " + name);
                 break;
             case "isizulu":
-               // addUsers(name);
                 System.out.println("Sawubona, " + name);
                 break;
             case "sesotho":
-               // addUsers(name);
                 System.out.println("Dumela, " + name);
                 break;
             default:
-                //addUsers(name);
                 System.out.println("Hello, " + name);
         }
     }
 
+    @Override
     public void addUsers(String user ){
         users.add(user);
         }
 
-
+@Override
     public int greetedUser(List allUsers, String userName) {
         int i = 0;
         int counter = 0;
@@ -75,6 +74,7 @@ public class Greeting {
         return counter;
     }
 
+    @Override
     public void greetedAll(List myUsers) {
         HashSet<String> uniqueUsers = new HashSet<>(myUsers);
         for (String user : uniqueUsers) {
@@ -95,13 +95,13 @@ public class Greeting {
         newUserList.clear();
     }
 
+    @Override
     public int counter(List themUsers) {
         HashSet<String> uniqueUsers = new HashSet<>(themUsers);
         for (String user : uniqueUsers) {
             newUserList.add(user);
         }
         System.out.println("There are " + newUserList.size() + " greeted user(s).");
-        // newUserList.clear();
         return  users.size();
     }
 
@@ -114,7 +114,7 @@ public class Greeting {
         return users.size();
     }
 
-    boolean exit() {
+    public boolean exit() {
         return exit = false;
     }
 }
