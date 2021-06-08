@@ -36,7 +36,7 @@ public class Greeting implements Greetings {
 
     }
 
-@Override
+    @Override
     public void greet(String name, String lan) {
         addUsers(name);
         switch (lan) {
@@ -59,7 +59,7 @@ public class Greeting implements Greetings {
         users.add(user);
         }
 
-@Override
+    @Override
     public int greetedUser(List allUsers, String userName) {
         int i = 0;
         int counter = 0;
@@ -105,6 +105,7 @@ public class Greeting implements Greetings {
         return  users.size();
     }
 
+    @Override
     public int removeUser(){
         HashSet<String> uniqueUsers = new HashSet<String>();
         for (String user : uniqueUsers) {
@@ -114,6 +115,7 @@ public class Greeting implements Greetings {
         return users.size();
     }
 
+    @Override
     public boolean exit() {
         return exit = false;
     }
