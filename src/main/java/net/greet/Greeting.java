@@ -25,7 +25,7 @@ public class Greeting implements Greetings {
 
 
     //THE METHODS
-    @Override
+
     public void help(){
         System.out.println("1. greet 'greet [name] [language]' " +
                 "\n2. check who's been greeted 'greeted' or 'greeted [name]' " +
@@ -36,7 +36,7 @@ public class Greeting implements Greetings {
 
     }
 
-    @Override
+
     public void greet(String name, String lan) {
         addUsers(name);
         switch (lan) {
@@ -115,7 +115,7 @@ public class Greeting implements Greetings {
         return users.size();
     }
 
-    @Override
+
     public boolean exit() {
         return exit = false;
     }

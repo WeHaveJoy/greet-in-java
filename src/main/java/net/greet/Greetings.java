@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface Greetings {
 
-    void  help();
+ //   void  help();
 
-    void greet(String name, String lan);
+    //void greet(String name, String lan);
 
     void addUsers(String user );
 
@@ -18,7 +18,7 @@ public interface Greetings {
 
     int counter(List themUsers);
 
-    boolean exit();
+   // boolean exit();
 
 
 }
