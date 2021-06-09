@@ -1,6 +1,7 @@
 package net.greet;
 
 import javax.swing.plaf.synth.SynthTabbedPaneUI;
+import java.util.Collections;
 
 public class Main {
 
@@ -43,7 +44,7 @@ public class Main {
             else if(words[0].equals("remove") && paramCount >= 2){
                 if (paramCount <= 2) {
                     greeting.removeUser();
-                    greeting.users.remove(words[1]);
+                    greeting.users.removeAll(Collections.singleton(words[1]));
                     System.out.println("User removed.");
                 }
 

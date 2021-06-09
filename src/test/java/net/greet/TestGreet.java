@@ -63,15 +63,6 @@ public class TestGreet {
         assertEquals(1, greeting.removeUser(), greeting.users.size());
    }
 
-
-//    @Test
-//    public void shouldBeAbleToClearAllInfo() {
-//        Greeting greeting = new Greeting();
-//        greeting.greet("Sivu", "isixhosa");
-//        greeting.greet("Sino", "");
-//        //greeting.removeUser();
-//        assertEquals(1, greeting.removeUser(), greeting.users.size());
-//    }
 }
 
 
